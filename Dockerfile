@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-RUN curl -O https://golang.org/dl/go1.14.15.linux-amd64.tar.gz && tar xzf go*gz -C /usr/local && rm -f go*gz
+RUN curl -sL https://golang.org/dl/go1.14.15.linux-amd64.tar.gz -o go.tar.gz && tar xzf go*gz -C /usr/local && rm -f go*gz
 ENV GOROOT=/usr/local/go
 ENV GOPATH=/usr/lib/go
 ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
